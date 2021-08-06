@@ -18,6 +18,22 @@ body {
   height: 100vh;
 }
 
+.sidebar__block-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  overflow-y: scroll;
+  max-height : 65%;
+}
+
+.sidebar__block-container::-webkit-scrollbar {
+  width: 0; 
+}
+
+.sidebar__block-container p {
+  margin-bottom: 15px;
+}
+
 .sidebar {
   height: 100vh;
   width: 100%;
@@ -33,6 +49,9 @@ body {
   align-items: center;
   justify-content: space-between;
   color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .sidebar__title {
@@ -45,6 +64,7 @@ body {
   cursor: pointer;
   padding: 20px;
   color: #fff;
+  user-select: none; 
 }
 
 .sidebar__title:hover {
@@ -55,16 +75,36 @@ body {
   font-family: 'Georama', sans-serif;
   font-size: 26px;
   font-weight: 500;
-  display: block;
-  padding: 40px 10px;
-  border-radius: 20px;
   line-height: 150%;
   letter-spacing: 3px;
+  user-select: none; 
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  max-height: 65%;
+  overflow-y: hidden;
+  padding: 40px 10px;
+  border-radius: 20px;
   width: 33%;
   text-align: center;
   margin-right: 22%;
   color: #fff;
   background-color: rgb(155, 155, 155, 0.5);
+}
+
+
+
+.sidebar__img {
+  width: 100%;
+  height: 25vh;
+
+  margin-bottom: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .main {
