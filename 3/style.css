@@ -44,6 +44,7 @@ body {
   transition: .3s;
   cursor: pointer;
   padding: 20px;
+  color: #fff;
 }
 
 .sidebar__title:hover {
@@ -66,22 +67,28 @@ body {
   background-color: rgb(155, 155, 155, 0.5);
 }
 
-
-.main-slide {
+.main {
   height: 100vh;
   position: absolute;
   top: 0;
   width: 100%;
-  transition: transform 0.5s ease-in-out;
-  clip-path: polygon(35% 100%, 35% 0px, 100% 0px, 100% 100%, 0px 100%)
+  transition: all 0.5s ease-in-out;
+  clip-path: polygon(35% 400%, 35% 0px, 400% 0px, 400% 400%, 0px 400%)
 }
 
-.main-slide > div {
+.main__slide {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
   height: 100%;
   width: 100%;
+  clip-path: polygon(35% 100%, 35% 0px, 100% 0px, 100% 100%, 0px 100%);
+  transition: all .5s ease-in-out;
+}
+
+.main__slide.active {
+  transform: translateX(50%);
 }
 
 button {
